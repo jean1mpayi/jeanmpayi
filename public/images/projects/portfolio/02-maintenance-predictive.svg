@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#182330"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#4cc9f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1290" cy="170" r="220" fill="#34d399" opacity="0.12"/>
+  <circle cx="250" cy="770" r="300" fill="#4cc9f0" opacity="0.08"/>
+  <rect x="100" y="120" width="560" height="12" rx="6" fill="url(#accent)"/>
+  <rect x="100" y="165" width="230" height="12" rx="6" fill="#DDE7FF" opacity="0.26"/>
+  <text x="100" y="420" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">Maintenance prédictive</text>
+  <text x="100" y="490" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="4">IOT • PYTHON • ANALYSE • INDUSTRIE</text>
+  <rect x="100" y="570" width="310" height="60" rx="30" fill="url(#accent)"/>
+  <text x="140" y="610" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">SYSTEME INTELLIGENT</text>
+</svg>

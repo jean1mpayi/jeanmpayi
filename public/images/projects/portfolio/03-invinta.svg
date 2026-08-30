@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#171a2d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="180" r="210" fill="#f59e0b" opacity="0.12"/>
+  <circle cx="260" cy="770" r="280" fill="#f43f5e" opacity="0.10"/>
+  <rect x="100" y="120" width="420" height="12" rx="6" fill="url(#accent)"/>
+  <rect x="100" y="165" width="240" height="12" rx="6" fill="#DDE7FF" opacity="0.28"/>
+  <text x="100" y="420" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">Invinta</text>
+  <text x="100" y="490" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="4">DJANGO • API • WEB • BUSINESS</text>
+  <rect x="100" y="570" width="220" height="60" rx="30" fill="url(#accent)"/>
+  <text x="150" y="610" fill="#0B1020" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">APP WEB</text>
+</svg>

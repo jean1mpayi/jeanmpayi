@@ -1,20 +1,29 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Jean",
+  lastName: "Muyeyi",
+  name: `Jean Muyeyi`,
+  role: "Creative Technologist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-  locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
+  email: "jeanmuyeyi@gmail.com",
+  location: "Africa/Kinshasa", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["French", "English", "Lingala"], // optional: Leave the array empty if you don't want to display languages
+  locale: "fr", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -26,25 +35,25 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/jean1mpayi",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/jean-muyeyi",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/jeanmpayi",
+    essential: true,
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/243992850240",
     essential: true,
   },
   {
@@ -58,36 +67,42 @@ const social: Social = [
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Accueil",
+  title: `Jean Muyeyi | Portfolio`,
+  description: `Portfolio de Jean Muyeyi, créatif technologique polyvalent en développement, multimédia et IoT.`,
+  headline: (
+    <>Je crée, je développe, j'expérimente — entre technologie et créativité.</>
+  ),
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Portfolio</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Projets phares
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      Je suis {person.firstName}, un{" "}
+      <Text as="span" size="xl" weight="strong">
+        software • multimedia • technology • creativity
+      </Text>{" "}
+      builder. <br /> Je conçois, je développe et je transforme des idées en
+      projets concrets.
     </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: `À propos – ${person.name}`,
+  description: `Découvrez ${person.name}, ${person.role} basé à ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -97,59 +112,70 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://wa.me/243992850240",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        {person.firstName} est un profil hybride à la croisée du développement
+        logiciel, du multimédia, de l'électronique et de la création de contenu.
+        Son parcours part de l'électricité et de l'électronique pour évoluer
+        vers le numérique, le web, l'IoT et la communication digitale. Il aime
+        transformer des idées en projets concrets, à la fois utiles, créatifs et
+        techniquement solides.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Expérience professionnelle",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "La Marge",
+        timeframe: "2023 - Aujourd'hui",
+        role: "Réalisation / production audiovisuelle",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Coordonner des productions audiovisuelles, la création de contenu et
+            la mise en ligne des projets média.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Contribuer à la direction artistique et à la réalisation de contenus
+            numériques inspirés par la créativité et la communication.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "ABSSEA",
+        timeframe: "2026 ",
+        role: "Community Manager / support digital",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Participer à la communication digitale, à la promotion des solutions
+            solaires et à la mise en valeur des services de l'entreprise.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Assurer une meilleure diffusion des offres et des projets autour de
+            l'énergie durable et des solutions technologiques.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Freelance / projets personnels",
+        timeframe: "2024 - Aujourd'hui",
+        role: "Développeur & créatif technologique",
+        achievements: [
+          <>
+            Développer des applications web, des API et des outils numériques
+            pour transformer des idées en solutions concrètes.
+          </>,
+          <>
+            Créer des projets mêlant technologie, multimédia et innovation, en
+            particulier dans le domaine de l'IoT, du web et de l'automatisation.
           </>,
         ],
         images: [],
@@ -157,78 +183,93 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Formation",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Diplôme d'État en électricité",
+        description: (
+          <>Formation technique en électricité et installations électriques.</>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Licence en électronique",
+        description: (
+          <>
+            Approfondissement en systèmes électroniques, électronique et
+            automatismes.
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Compétences clés",
     skills: [
       {
-        title: "Figma",
+        title: "Développement logiciel",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Conception de solutions web, API REST, back-end et applications
+            utiles au quotidien.
+          </>
         ),
         tags: [
           {
-            name: "Figma",
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "Django",
+            icon: "django",
+          },
+          {
+            name: "React",
+            icon: "react",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Multimédia & création",
+        description: (
+          <>
+            Production numérique, storytelling visuel, création de contenus et
+            réalisation audiovisuelle.
+          </>
+        ),
+        tags: [
+          {
+            name: "Video",
+            icon: "video",
+          },
+          {
+            name: "Design",
             icon: "figma",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "IoT & systèmes embarqués",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Réalisation de projets connectés et de systèmes électroniques
+            intelligents.
+          </>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "ESP8266",
+            icon: "microchip",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
+            name: "IoT",
+            icon: "chip",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
     ],
   },
@@ -237,26 +278,26 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Écrire sur la technologie, le design et l'innovation",
+  description: `Lecture des idées et projets récents de ${person.name}`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Projets",
+  title: `Projets – ${person.name}`,
+  description: `Projets numériques, multimédia et technologiques de ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Galerie",
+  title: `Galerie – ${person.name}`,
+  description: `Une sélection visuelle de projets et réalisations créatives par ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
