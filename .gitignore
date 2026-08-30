@@ -10,15 +10,25 @@
 /coverage
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
 /build
+/.vercel/
+
+# local dev/editor
+.vscode/
+.idea/
+*.log
 
 # misc
 .DS_Store
 *.pem
+
+# node
+node_modules/
+/.pnpm-store/
 
 # debug
 npm-debug.log*
@@ -26,10 +36,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
-
-# vercel
-.vercel
+.env
+.env.*
+!.env.example
 
 # typescript
 *.tsbuildinfo
